@@ -1,5 +1,6 @@
 // ||Fonts
 @import url("https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Libre+Franklin:ital,wght@0,100..900;1,100..900&display=swap");
 @font-face {
   font-family: "NewForest";
   src: local("NewForest"), local("NewForest-Regular"),
@@ -70,6 +71,8 @@ $device-desktop-xl: 1920px;
   // || TypoGraphy
   --font-fallback-stack: Georgia, -apple-system, BlinkMacSystemFont, serif;
   --ff-base: "Lora", var(--font-fallback-stack);
+  --ff-secondary: "Libre Franklin", -apple-system, BlinkMacSystemFont,
+    sans-serif;
   --ff-heading: "NewForest", var(--font-fallback-stack);
 
   // || Colors
