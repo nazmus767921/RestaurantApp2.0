@@ -1,4 +1,4 @@
-import { Button, ButtonProps, Flex, Grid, Text } from "@chakra-ui/react";
+import { Button, ButtonProps, Flex, Grid, Link, Text } from "@chakra-ui/react";
 import Logo from "@components/Logo";
 import SocialIcons from "@components/SocialIcons";
 import { utilizeModuleClasses } from "easy-css-modules";
@@ -19,13 +19,24 @@ const Footer = () => {
 
 const OtherInfoItems = () => {
   const ColoredText = useCallback(({ children }: { children: ReactNode }) => {
-    return <Text color={"var(--accent)"}>{children}</Text>;
+    return (
+      <Text fontFamily={"var(--ff-secondary)"} color={"var(--accent)"}>
+        {children}
+      </Text>
+    );
   }, []);
   return (
     <Flex direction={"column"} gap={"var(--spacing-3)"} align={"center"}>
       <SocialIcons />
       <ColoredText>
-        © Copyright Nazmus Sakib. https://Nazmus.vercel.app
+        © Copyright Nazmus Sakib.{" "}
+        <Link
+          textDecor={"underline"}
+          textUnderlineOffset={"0.25rem"}
+          _hover={{ opacity: 0.7 }}
+        >
+          https://Nazmus.vercel.app
+        </Link>
       </ColoredText>
       <ColoredText>All Right Reserved.</ColoredText>
       <ColoredText>Privacy policy</ColoredText>
