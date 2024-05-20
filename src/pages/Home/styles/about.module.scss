@@ -1,0 +1,45 @@
+.about {
+  position: relative;
+  min-height: -moz-fit-content;
+  min-height: fit-content;
+  padding: var(--spacing-4);
+
+  &::after {
+    content: "";
+    background-image: url("/src/assets/images/divider.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 28.75rem;
+    height: 3.45rem;
+
+    position: absolute;
+    right: 0;
+    bottom: 10rem;
+  }
+
+  &__restaurantImages {
+    align-content: start;
+    width: 50vw;
+    margin-inline: calc(-25vw + 25%);
+    grid-template-areas: imagesStack;
+    width: 40rem;
+    height: 40rem;
+
+    .topImage,
+    .bottomImage {
+      position: relative;
+    }
+
+    .topImage {
+      grid-area: imagesStack;
+      z-index: 0;
+    }
+    .bottomImage {
+      grid-area: imagesStack;
+      z-index: 1;
+      top: 15%;
+      left: -40%;
+    }
+  }
+}

@@ -1,0 +1,33 @@
+.hero {
+  background-image: url("../../../assets/images/heroimage.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+
+  min-height: calc(100svh + var(--position-of-titleRowCard));
+
+  display: grid;
+  place-items: center;
+  place-content: center;
+  gap: 2rem;
+  position: relative;
+
+  &__title {
+    --_positionY: 4rem;
+    color: var(--accent);
+    position: relative;
+    -webkit-user-select: none;
+    user-select: none;
+    margin-bottom: calc(
+      -1 * var(--_positionY) - 2rem
+    ); // resets the space occupied by relative position of spanned text
+    &--span {
+      position: relative;
+      bottom: var(--_positionY);
+    }
+  }
+
+  &__bottomArea {
+    padding-block-end: var(--position-of-titleRowCard);
+  }
+}

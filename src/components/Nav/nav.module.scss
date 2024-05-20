@@ -1,0 +1,41 @@
+.navbar {
+  &:has(.navbar__menuBtn:hover) &__menuBtn.isActive {
+    color: var(--accent);
+    &::after {
+      transform: translateX(-101%);
+    }
+  }
+  &:has(.navbar__menuBtn:hover) &__menuBtn.isActive:hover {
+    color: var(--brand);
+    &::after {
+      transform: translateX(0%);
+    }
+  }
+
+  &__menuBtn {
+    &:hover {
+      color: var(--brand);
+      &::after {
+        transform: translateX(0);
+      }
+    }
+
+    &.isActive,
+    &.isActive:hover {
+      color: var(--brand);
+      &::after {
+        transform: translateX(0);
+      }
+    }
+
+    &::after {
+      content: "";
+      background-color: var(--brand);
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      height: 3px;
+      transform: translateX(-101%);
+    }
+  }
+}

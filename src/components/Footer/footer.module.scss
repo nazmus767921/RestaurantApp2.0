@@ -1,0 +1,9 @@
+.footer {
+  min-height: -moz-fit-content;
+  min-height: fit-content;
+  
+  grid-template-columns: 1.25fr .5fr 1.5fr;
+  place-items: center;
+
+  padding-block: var(--spacing-6);
+}
