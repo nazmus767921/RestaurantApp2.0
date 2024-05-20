@@ -59,7 +59,7 @@ const Nav = ({
 
 const NavMenu = () => {
   return (
-    <Flex justify={"center"} align={"center"}>
+    <Flex justify={"center"} align={"center"} gap={'var(--spacing-2)'}>
       {navLinks.map((navlink) => {
         return (
           <MenuBtn key={navlink.id} url={navlink.url}>
@@ -85,7 +85,7 @@ const MenuBtn = ({
       <NavLink to={url}>
         <MenuButton
           color={"var(--accent)"}
-          padding={"var(--spacing-1)"}
+          paddingBlock={"var(--spacing-1)"}
           textTransform={"capitalize"}
           flexDirection={"column"}
           overflow={"hidden"}
