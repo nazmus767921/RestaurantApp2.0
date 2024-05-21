@@ -1,0 +1,7 @@
+.addressCard {
+  &__textContent + &__textContent {
+    margin-block-start: var(--spacing-4);
+    padding-block-start: var(--spacing-4);
+    border-top: 1.5px solid var(--accent);
+  }
+}
