@@ -1,0 +1,46 @@
+.foodMenuSection {
+  /* Background */
+  background-image: linear-gradient(
+      180deg,
+      rgba(4, 4, 10, 0) 21.609%,
+      rgb(4, 4, 10) 99.16%
+    ),
+    linear-gradient(180deg, rgba(4, 4, 10, 0) 21.609%, rgb(4, 4, 10) 99.16%),
+    url("/images/bg3.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  grid-template-columns: minmax(auto, 22rem) 1fr;
+  padding-block: var(--spacing-7);
+  padding-block-start: var(--spacing-5);
+
+  /* Children */
+
+  .sidebar {
+    menu {
+      display: flex;
+      flex-direction: column;
+      gap: var(--spacing-2);
+      align-items: flex-start;
+      padding-inline: var(--spacing-1);
+    }
+
+    &__button {
+      font-family: var(--ff-heading);
+      font-size: var(--fs-h5);
+      opacity: 0.6;
+
+      &.isSelected {
+        font-size: calc(var(--fs-h5) + 0.75rem);
+        color: var(--brand);
+        opacity: 1;
+      }
+
+      &:hover,
+      &:focus {
+        opacity: 1;
+      }
+    }
+  }
+}
