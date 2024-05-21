@@ -12,11 +12,22 @@ interface FoodMenuTextProps {
 
 export interface FoodCardProps extends FoodMenuTextProps {
   image: string;
+  isBlur?: boolean;
 }
 
-const FoodCard = ({ image, name, description, price }: FoodCardProps) => {
+const FoodCard = ({
+  image,
+  name,
+  description,
+  price,
+  isBlur,
+}: FoodCardProps) => {
   return (
-    <Flex direction={"column"} className={$_("foodCard")} gap={"0.5rem"}>
+    <Flex
+      direction={"column"}
+      className={$_(`foodCard ${isBlur ? "isBlur" : ""}`)}
+      gap={"0.5rem"}
+    >
       <Flex justify={"center"} align={"center"}>
         <Image src={`/images/${image}`} objectFit={"contain"} />
       </Flex>
@@ -31,7 +42,7 @@ const FoodMenuText = ({ name, description, price }: FoodMenuTextProps) => {
       <Text as={"h5"} color={"var(--brand)"}>
         {name}
       </Text>
-      <Text>{description}</Text>
+      <Text opacity={0.6}>{description}</Text>
       <Text as={"h6"} color={"var(--accent)"}>
         <Box
           as="span"

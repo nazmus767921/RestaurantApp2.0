@@ -2,7 +2,6 @@
   /* menu__card */
   width: 100%;
   max-width: 18.75rem;
-  min-height: 28.63rem;
   /* Auto layout */
   justify-content: space-between;
   align-items: center;
@@ -16,10 +15,13 @@
 
   // appearance
   border-radius: 0.63rem;
+  background: url(notebook-dark), rgba(11, 11, 13, 1);
 
-  -webkit-backdrop-filter: blur(0.54rem);
-  backdrop-filter: blur(0.54rem);
-  background: url(notebook-dark), rgba(11, 11, 13, 0.4);
+  &.isBlur {
+    -webkit-backdrop-filter: blur(0.54rem);
+    backdrop-filter: blur(0.54rem);
+    background: url(notebook-dark), rgba(11, 11, 13, 0.4);
+  }
 
   box-shadow: rgba(67, 65, 36, 0.2) 0px 50px 100px -20px,
     rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;

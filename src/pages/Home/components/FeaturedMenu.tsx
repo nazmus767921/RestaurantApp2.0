@@ -105,6 +105,7 @@ const MenuStack = () => {
             name={name}
             description={description}
             price={price}
+            isBlur
           />
         );
       })}
